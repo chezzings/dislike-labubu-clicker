@@ -13,14 +13,12 @@ h1 {
 
 .click-area img {
   width: 300px;
-  transition: filter 0.1s, transform 0.1s;
   margin-bottom: 20px;
 }
 
-/* Efeito de dano */
 img.dano {
-  filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(4200%) hue-rotate(0deg) brightness(110%) contrast(100%);
-  transform: scale(0.98);
+  /* Efeito de dano leve e imediato */
+  filter: brightness(85%) sepia(50%) hue-rotate(-20deg);
 }
 
 #dislike-button {
@@ -31,7 +29,6 @@ img.dano {
   font-size: 1.2rem;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
 }
 
 #dislike-button:hover {
