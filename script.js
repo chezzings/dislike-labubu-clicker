@@ -1,18 +1,19 @@
 let count = 0;
-const counter = document.getElementById("counter");
-const dislikeButton = document.getElementById("dislike-button");
-const audio = document.getElementById("audio");
-const overlay = document.getElementById("hit-overlay");
 
-dislikeButton.addEventListener("click", () => {
+const button = document.getElementById("dislike-btn");
+const counter = document.getElementById("counter");
+const overlay = document.getElementById("damage-overlay");
+const sound = document.getElementById("hit-sound");
+
+button.addEventListener("click", () => {
   count++;
   counter.textContent = `Deslikes: ${count}`;
-  audio.currentTime = 0;
-  audio.play();
 
-  // Ativa o overlay vermelho
-  overlay.classList.add("show");
+  overlay.style.display = "block";
   setTimeout(() => {
-    overlay.classList.remove("show");
+    overlay.style.display = "none";
   }, 100);
+
+  sound.currentTime = 0;
+  sound.play();
 });
