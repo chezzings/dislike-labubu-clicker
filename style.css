@@ -1,27 +1,44 @@
 body {
   background-color: #111;
   color: white;
-  font-family: 'Comic Sans MS', sans-serif;
+  font-family: 'Arial', sans-serif;
   text-align: center;
   padding: 30px;
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-#counter {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   margin-bottom: 20px;
 }
 
 .click-area img {
   width: 300px;
-  cursor: pointer;
-  transition: transform 0.1s ease;
+  transition: filter 0.1s, transform 0.1s;
+  margin-bottom: 20px;
 }
 
-.click-area img:active {
-  transform: scale(0.95) rotate(-2deg);
+/* Efeito de dano */
+img.dano {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(100%) saturate(4200%) hue-rotate(0deg) brightness(110%) contrast(100%);
+  transform: scale(0.98);
+}
+
+#dislike-button {
+  background-color: #ff3333;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#dislike-button:hover {
+  background-color: #cc0000;
+}
+
+#counter {
+  font-size: 1.3rem;
+  margin-top: 15px;
 }
