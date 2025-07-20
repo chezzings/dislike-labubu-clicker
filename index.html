@@ -3,23 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Deslike no Labubu Funk 💀</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Deslike no Labubu</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <h1>Dê Deslike no Labubu Funk 💀</h1>
-
-  <div class="click-area">
-    <div class="labubu-container">
-      <img src="labubu.png" id="labubu" alt="Labubu Funk" />
-      <div id="hit-overlay"></div>
+  <div class="container">
+    <div class="labubu-wrapper">
+      <img id="labubu" src="labubu.jpg" alt="Labubu Funk" />
+      <div id="damage-overlay"></div>
     </div>
+    <button id="dislike-btn">👎 Deslike!</button>
+    <p id="counter">Deslikes: 0</p>
+    <audio id="hit-sound" src="hit.mp3"></audio>
   </div>
-
-  <button id="dislike-button">👎 Dar Deslike</button>
-  <p id="counter">Deslikes: 0</p>
-
-  <audio id="audio" src="dislike.mp3" preload="auto"></audio>
 
   <script src="script.js"></script>
 </body>
