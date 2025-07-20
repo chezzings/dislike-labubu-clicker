@@ -11,14 +11,32 @@ h1 {
   margin-bottom: 20px;
 }
 
-.click-area img {
+.labubu-container {
+  position: relative;
+  display: inline-block;
   width: 300px;
-  margin-bottom: 20px;
+  height: auto;
 }
 
-img.dano {
-  /* Efeito de dano leve e imediato */
-  filter: brightness(85%) sepia(50%) hue-rotate(-20deg);
+.labubu-container img {
+  width: 100%;
+  display: block;
+}
+
+#hit-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Efeito de dano visual */
+#hit-overlay.show {
+  opacity: 0.5;
 }
 
 #dislike-button {
