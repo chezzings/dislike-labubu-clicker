@@ -1,20 +1,18 @@
 let count = 0;
-const labubu = document.getElementById("labubu");
 const counter = document.getElementById("counter");
-const audio = document.getElementById("audio");
 const dislikeButton = document.getElementById("dislike-button");
+const audio = document.getElementById("audio");
+const overlay = document.getElementById("hit-overlay");
 
 dislikeButton.addEventListener("click", () => {
   count++;
   counter.textContent = `Deslikes: ${count}`;
-  
-  // Reproduz som (opcional)
   audio.currentTime = 0;
   audio.play();
 
-  // Aplica efeito de dano rápido e leve
-  labubu.classList.add("dano");
+  // Ativa o overlay vermelho
+  overlay.classList.add("show");
   setTimeout(() => {
-    labubu.classList.remove("dano");
-  }, 100); // duração bem curta
+    overlay.classList.remove("show");
+  }, 100);
 });
