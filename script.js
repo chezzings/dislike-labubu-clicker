@@ -8,13 +8,13 @@ dislikeButton.addEventListener("click", () => {
   count++;
   counter.textContent = `Deslikes: ${count}`;
   
-  // Efeito sonoro (opcional)
+  // Reproduz som (opcional)
   audio.currentTime = 0;
   audio.play();
 
-  // Efeito de dano visual
+  // Aplica efeito de dano rápido e leve
   labubu.classList.add("dano");
   setTimeout(() => {
     labubu.classList.remove("dano");
-  }, 150);
+  }, 100); // duração bem curta
 });
